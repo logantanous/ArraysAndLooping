@@ -25,24 +25,42 @@ function upperCaseWords (str) {
     });
 }
 
-function robotify(input, name) {
+function robotify(input, name, movement) {
+  var start = ", this conversation can serve no purpose anymore. Goodbye.";
   if (!isNaN(input.charAt(0))) {
-    for (var i = 0; i <= input; i++) {
-      var result = processNumber(i, name);
-      $(".result").append(result+"<br>");
+    if (movement == "forwards"){
+      for (var i = 0; i <= input; i++) {
+        var result = processNumber(i, name);
+        $(".result").append(result+"<br>");
+      }
+      $(".result").append(name+start);
+    } else {
+      $(".result").append(name+start+"<br>");
+      for (var i = input; i >= 0; i--) {
+        //alert(i);
+        var result = processNumber(i, name);
+        $(".result").append(result+"<br>");
+      }
     }
-    $(".result").append(name+", this conversation can serve no purpose anymore. Goodbye.");
   } else {
     alert("Please input a number");
   }
 }
 
+function submitText(movement) {
+  $(".result").html('');
+  var regularText = $("#robotInputBox").val();
+  var nameBox = upperCaseWords($("#nameBox").val());
+  robotify(regularText, nameBox, movement);
+}
+
+
 //front end
 $(document).ready(function() {
   $("#robotifyButton").click(function() {
-    $(".result").html('');
-    var regularText = $("#robotInputBox").val();
-    var nameBox = upperCaseWords($("#nameBox").val());
-    robotify(regularText, nameBox);
+    submitText("forwards");
+  })
+  $("#robotifyBackwardsButton").click(function() {
+    submitText("backwards");
   })
 });
