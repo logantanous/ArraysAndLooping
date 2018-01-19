@@ -27,23 +27,27 @@ function upperCaseWords (str) {
 
 function robotify(input, name, movement) {
   var start = ", this conversation can serve no purpose anymore. Goodbye.";
-  if (!isNaN(input.charAt(0))) {
-    if (movement == "forwards"){
-      for (var i = 0; i <= input; i++) {
-        var result = processNumber(i, name);
-        $(".result").append(result+"<br>");
-      }
-      $(".result").append(name+start);
-    } else {
-      $(".result").append(name+start+"<br>");
-      for (var i = input; i >= 0; i--) {
-        //alert(i);
-        var result = processNumber(i, name);
-        $(".result").append(result+"<br>");
-      }
-    }
+  if (input == "" && name == "") {
+    alert("Please insert a number and a name")
   } else {
-    alert("Please input a number");
+    if (!isNaN(input.charAt(0))) {
+      if (movement == "forwards"){
+        for (var i = 0; i <= input; i++) {
+          var result = processNumber(i, name);
+          $(".result").append(result+"<br>");
+        }
+        $(".result").append(name+start);
+      } else {
+        $(".result").append(name+start+"<br>");
+        for (var i = input; i >= 0; i--) {
+          //alert(i);
+          var result = processNumber(i, name);
+          $(".result").append(result+"<br>");
+        }
+      }
+    } else {
+      alert("Please input a number");
+    }
   }
 }
 
