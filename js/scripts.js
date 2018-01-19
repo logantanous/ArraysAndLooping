@@ -16,9 +16,14 @@ function processNumber(input) {
 }
 
 function robotify(input) {
-  for (var i = 0; i <= input; i++) {
-    var result = processNumber(i);
-    $(".result").append(result+"<br>");
+  if (!isNaN(input.charAt(0))) {
+    for (var i = 0; i <= input; i++) {
+      var result = processNumber(i);
+      $(".result").append(result+"<br>");
+    }
+    $(".result").append("Dave, this conversation can serve no purpose anymore. Goodbye.");
+  } else {
+    alert("Please input a number");
   }
 }
 
@@ -27,6 +32,6 @@ $(document).ready(function() {
   $("#robotifyButton").click(function() {
     $(".result").html('');
     var regularText = $("input").val();
-      robotify(regularText);
+    robotify(regularText);
   })
 });
