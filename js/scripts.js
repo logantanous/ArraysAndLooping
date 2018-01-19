@@ -9,7 +9,11 @@ function processNumber(input) {
       if (String(input).match(/0/)) {
         return "Beep!";
       } else {
-        return input;
+        if (String(input).match(/4/)) {
+          return "WeeWoo";
+        } else {
+          return input;
+        }
       }
     }
   }
