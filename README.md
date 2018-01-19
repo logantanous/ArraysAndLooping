@@ -29,6 +29,12 @@ _This project gives output based on user input of a number._
    <li>Example Output: [“boop”]</li>
   </ul>
  </li>
+ <li>Program replaces numbers that include 4 with "WeeWoo!"
+  <ul>
+   <li>Example Input: 4</li>
+   <li>Example Output: [“WeeWoo!”]</li>
+  </ul>
+ </li>
  <li>Program replaces numbers divisible by 3 with "I'm sorry, Dave. I'm afraid I can't do that."
   <ul>
    <li>Example Input: 30</li>
