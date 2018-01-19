@@ -19,6 +19,12 @@ function processNumber(input, name) {
   }
 }
 
+function upperCaseWords (str) {
+    return (str + '').replace(/^([a-z])|\s+([a-z])/g, function ($1) {
+        return $1.toUpperCase();
+    });
+}
+
 function robotify(input, name) {
   if (!isNaN(input.charAt(0))) {
     for (var i = 0; i <= input; i++) {
@@ -36,7 +42,7 @@ $(document).ready(function() {
   $("#robotifyButton").click(function() {
     $(".result").html('');
     var regularText = $("#robotInputBox").val();
-    var nameBox = $("#nameBox").val();
+    var nameBox = upperCaseWords($("#nameBox").val());
     robotify(regularText, nameBox);
   })
 });
