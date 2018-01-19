@@ -1,7 +1,7 @@
 //back end
-function processNumber(input) {
+function processNumber(input, name) {
   if (input % 3 === 0) {
-    return "I'm sorry, Dave. I'm afraid I can't do that.";
+    return "I'm sorry, "+name+". I'm afraid I can't do that.";
   } else {
     if (String(input).match(/1/)) {
       return "Boop!";
@@ -19,13 +19,13 @@ function processNumber(input) {
   }
 }
 
-function robotify(input) {
+function robotify(input, name) {
   if (!isNaN(input.charAt(0))) {
     for (var i = 0; i <= input; i++) {
-      var result = processNumber(i);
+      var result = processNumber(i, name);
       $(".result").append(result+"<br>");
     }
-    $(".result").append("Dave, this conversation can serve no purpose anymore. Goodbye.");
+    $(".result").append(name+", this conversation can serve no purpose anymore. Goodbye.");
   } else {
     alert("Please input a number");
   }
@@ -35,7 +35,8 @@ function robotify(input) {
 $(document).ready(function() {
   $("#robotifyButton").click(function() {
     $(".result").html('');
-    var regularText = $("input").val();
-    robotify(regularText);
+    var regularText = $("#robotInputBox").val();
+    var nameBox = $("#nameBox").val();
+    robotify(regularText, nameBox);
   })
 });
