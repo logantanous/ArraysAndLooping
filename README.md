@@ -17,6 +17,11 @@ _This project gives output based on user input of a number._
    <li>Example Output: [alert(“Please input a number”)]</li>
   </ul>
  </li>
+ <li>Program displays a warning when nothing is input in name or number box
+  <ul>
+   <li>Example Output: [alert(“Please insert a number and a name”)]</li>
+  </ul>
+ </li>
  <li>Program replaces numbers that include 0 with “beep”!
   <ul>
    <li>Example Input: 0</li>
