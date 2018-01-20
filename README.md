@@ -8,7 +8,7 @@
 
 _This project gives output based on user input of a number._
 
-##Specifications
+## Specifications
 
 <ul>
  <li>Program displays a warning when nothing is input in name or number box
