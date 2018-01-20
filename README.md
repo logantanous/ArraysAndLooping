@@ -11,15 +11,9 @@ _This project gives output based on user input of a number._
 ##Specifications
 
 <ul>
- <li>Program displays a warning when a non-number is the input
-  <ul>
-   <li>Example Input: t</li>
-   <li>Example Output: [alert(“Please input a number”)]</li>
-  </ul>
- </li>
  <li>Program displays a warning when nothing is input in name or number box
   <ul>
-   <li>Example Output: [alert(“Please insert a number and a name”)]</li>
+   <li>Example Output: [alert(“Please fill out all input boxes”)]</li>
   </ul>
  </li>
  <li>Program replaces numbers that include 0 with “beep”!
@@ -57,7 +51,19 @@ _This project gives output based on user input of a number._
    <li>Example Input: 30</li>
    <li>[I'm sorry, Dave. I'm afraid I can't do that.]</li>
   </ul>
- </li>   
+ </li>
+ <li>Program submits when hitting the submit button
+  <ul>
+   <li>Example Input: submit</li>
+   <li>[answer content revealed]</li>
+  </ul>
+ </li>  
+ <li>Program submits backwards when hitting the submit backwards button
+  <ul>
+   <li>Example Input: submit backwards button press</li>
+   <li>[answer content reverse revealed]</li>
+  </ul>
+ </li>     
 </ul>
 
 ## Setup/Installation Requirements
