@@ -10,7 +10,8 @@ function processNumber(input, name) {
     else {
       if (String(input).match(/0/)) {
         return "Beep!";
-      } else {
+      }
+      else {
         if (String(input).match(/4/)) {
           return "WeeWoo!";
         }
